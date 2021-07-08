@@ -72,7 +72,7 @@ router.put('/:_id', handlerCheckPermission, async(req, res) => {
 
         const userCheck = await UserModel.findOne({ username: username })
         if (userCheck) {
-            return res.json({ code: 201, errorMess: 'this username has been asd duplicated! ' });
+            return res.json({ code: 201, errorMess: 'this username has been duplicated! ' });
         } else {
             const userUpdate = await UserModel.updateOne({ _id: _id }, payload).then(() => {
                 return UserModel.findById(_id);
