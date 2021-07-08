@@ -39,7 +39,8 @@ app.use(function(err, req, res, next) {
 
 const connetMongoDB = async() => {
     try {
-        await mongoose.connect('mongodb://localhost/training-project', { useNewUrlParser: true });
+        // await mongoose.connect('mongodb://localhost/training-project', { useNewUrlParser: true });
+        await mongoose.connect('mongodb+srv://cuong:Cuong123@cluster0.e5tg5.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', { useNewUrlParser: true });
     } catch (error) {
         console.error('connect MongoDb has error: ' + error);
     }
