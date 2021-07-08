@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const jwt = require("jsonwebtoken");
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const { MESSAGES, KEY } = require('../../constant/index');
 import handlerVerifyUser from '../middleware/auth';
 
